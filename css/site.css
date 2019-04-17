@@ -1,11 +1,18 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
 }
 
 .navigation{
-    height: 20vh;
+    height: 10vh;
+    max-height: 200px;
+    padding: 10px;
+    background-color: white;
 }
 
+.footer{
+    background-color: white;
+}
 textarea{
     min-height: 60vh;
     max-height: 60vh;
@@ -13,6 +20,11 @@ textarea{
 }
 
 .entry-boxes{
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 50px;
+}
+
+.logo{
+    font-size: xx-large;
+    color: cornflowerblue;
+    text-align: left;
 }
