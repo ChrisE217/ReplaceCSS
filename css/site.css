@@ -12,6 +12,7 @@ body{
 
 .footer{
     background-color: white;
+    text-align: center;
 }
 textarea{
     min-height: 60vh;
