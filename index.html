@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/site.css">
+  <script src="codemirror-5.45.0/lib/codemirror.js"></script>
+  <link rel="stylesheet" href="codemirror-5.45.0/lib/codemirror.css">
+  <script src="codemirror-5.45.0/mode/javascript/javascript.js"></script>
   <title>ReplaceCSS</title>
 </head>
 
@@ -18,17 +21,11 @@
       </div>
     </div>
     <div class="row entry-boxes">
-      <div class="col-lg-6">
+      <div id="html-input" class="col-lg-6">
         <h4>Enter HTML:</h4>
-        <div class="input-group">
-          <textarea id="input" class="form-control"></textarea>
-        </div>
       </div>
-      <div class="col-lg-6">
+      <div id="css-input" class="col-lg-6">
         <h4>CSS Output:</h4>
-        <div class="input-group">
-          <textarea id="output" class="form-control"></textarea>
-        </div>
       </div>
     </div>
   </div>
