@@ -1,5 +1,5 @@
 
-var hmtlBox = CodeMirror(document.getElementById('html-input'), {
+var inputHTMLBox = CodeMirror(document.getElementById('html-input'), {
     value: "<div class=\"btn btn-primary\" style=\"color: blue;\">Button</div>",
     mode: "htmlmixed",
     lineNumbers: true,
@@ -9,7 +9,7 @@ var hmtlBox = CodeMirror(document.getElementById('html-input'), {
   });
 
   
-var cssBox = CodeMirror(document.getElementById('home'), {
+var outputCSSBox = CodeMirror(document.getElementById('home'), {
     value: "body{\n\tbackground-color: blue;\n}",
     mode: "css",
     lineNumbers: true,
@@ -18,7 +18,7 @@ var cssBox = CodeMirror(document.getElementById('home'), {
     lineWrapping: true,
   });
 
-  var css2Box = CodeMirror(document.getElementById('profile'), {
+  var outputHTMLBox = CodeMirror(document.getElementById('profile'), {
     value: "<div class=\"btn btn-primary\">Button</div>",
     mode: "htmlmixed",
     lineNumbers: true,
@@ -26,4 +26,5 @@ var cssBox = CodeMirror(document.getElementById('home'), {
     //readOnly: true,
     lineWrapping: true,
   });
+
 

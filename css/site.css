@@ -1,8 +1,29 @@
-@media only screen and (max-width: 991px){
+@media screen and (max-width: 991px ) {
     body{
         overflow: scroll !important;
     }
+    .footer{
+          font-size: medium !important;
+    }
+    .footer .card-title{
+        display: none;
+    }
 }
+
+@media screen and (max-height: 800px){
+    .footer{
+        font-size: medium !important;
+  }
+  .footer .card-title{
+      display: none;
+  }
+}
+@media screen and (max-width: 600px ) {
+    .footer{
+          font-size: x-small !important;
+    }
+}
+
 
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,25 +48,23 @@ body{
     text-align: center;
     height: 10vh;
     max-height: 10vh;
-    min-height: 10vh;
 }
+
 #html-input, #css-output{
     min-height: 80vh;
     max-height: 80vh;
     height: 80vh;
 }
 
-#myOutputcontent{
-    min-height: 90%;
-    max-height: 90%;
-    height: 90%;
+#myOutputContent{
+    padding-bottom: 5% !important;
 }
 
 .entry-boxes{
     padding-top: 20px;
+    padding-bottom: 20px;
     height: 80vh;
     max-height: 80vh;
-    min-height: 80vh;
 }
 
 .logo{
@@ -55,9 +74,10 @@ body{
 }
 
  .CodeMirror{
-    min-height: 90%;
     max-height: 90%;
-    height: 90%;
+    height: 90% !important;
+    border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 3%;
 }
 
 #home, #profile{
@@ -65,10 +85,6 @@ body{
     max-height: 80vh;
     height: 80vh;
 }
-
-/* #profile{
-    display: none;
-} */
 
 #replace-button{
     float: right;
@@ -79,4 +95,19 @@ body{
 
 #html-header{
     padding-bottom: 6px;
+}
+
+
+.nav-tabs .nav-link{
+    border: none;
+    color: white;
+}
+
+.nav-tabs .nav-link.active{
+    background-color: #282a36;
+    color: white;
+}
+
+.nav-tabs{
+    border-bottom: 1px solid rgba(0,0,0,.125);
 }
