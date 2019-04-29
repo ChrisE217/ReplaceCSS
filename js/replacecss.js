@@ -14,7 +14,7 @@ var outputCSSBox = CodeMirror(document.getElementById('home'), {
     mode: "css",
     lineNumbers: true,
     theme: "dracula",
-   // readOnly: true,
+    readOnly: true,
     lineWrapping: true,
   });
 
@@ -23,7 +23,7 @@ var outputCSSBox = CodeMirror(document.getElementById('home'), {
     mode: "htmlmixed",
     lineNumbers: true,
     theme: "dracula",
-    //readOnly: true,
+    readOnly: true,
     lineWrapping: true,
   });
 
