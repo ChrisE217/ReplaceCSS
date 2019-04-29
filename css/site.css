@@ -86,6 +86,8 @@ body{
     height: 80vh;
 }
 
+
+
 #replace-button{
     float: right;
     background-color: cornflowerblue;
@@ -110,4 +112,8 @@ body{
 
 .nav-tabs{
     border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+#profile{
+    position: fixed;
 }

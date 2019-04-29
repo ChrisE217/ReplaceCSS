@@ -28,3 +28,6 @@ var outputCSSBox = CodeMirror(document.getElementById('home'), {
   });
 
 
+  $('#html-tab').click( () => {
+    $('#profile').attr('style', 'position: static;')
+  });
