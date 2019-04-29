@@ -9,12 +9,21 @@ var hmtlBox = CodeMirror(document.getElementById('html-input'), {
   });
 
   
-var cssBox = CodeMirror(document.getElementById('css-input'), {
+var cssBox = CodeMirror(document.getElementById('home'), {
     value: "body{\n\tbackground-color: blue;\n}",
     mode: "css",
     lineNumbers: true,
     theme: "dracula",
-    readOnly: true,
+   // readOnly: true,
+    lineWrapping: true,
+  });
+
+  var css2Box = CodeMirror(document.getElementById('profile'), {
+    value: "<div class=\"btn btn-primary\">Button</div>",
+    mode: "htmlmixed",
+    lineNumbers: true,
+    theme: "dracula",
+    //readOnly: true,
     lineWrapping: true,
   });
 

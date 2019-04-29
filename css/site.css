@@ -1,31 +1,51 @@
+@media only screen and (max-width: 991px){
+    body{
+        overflow: scroll !important;
+    }
+}
+
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #212529;
     color: white;
+    overflow: hidden;
 }
 
 .navigation{
     height: 10vh;
-    max-height: 200px;
-    padding: 10px;
+    max-height: 10vh;
+    min-height: 10vh;
+    padding: 20px;
     background-color: #212529;
     border: 1px solid rgba(0,0,0,.125);
-border-radius: .25rem;
+    border-radius: .25rem;
+    align-content: center;
 }
 
 .footer{
     background-color: #212529;
     text-align: center;
-
+    height: 10vh;
+    max-height: 10vh;
+    min-height: 10vh;
 }
-textarea{
-    min-height: 60vh;
-    max-height: 60vh;
-    overflow: scroll;
+#html-input, #css-output{
+    min-height: 80vh;
+    max-height: 80vh;
+    height: 80vh;
+}
+
+#myOutputcontent{
+    min-height: 90%;
+    max-height: 90%;
+    height: 90%;
 }
 
 .entry-boxes{
-    padding: 50px;
+    padding-top: 20px;
+    height: 80vh;
+    max-height: 80vh;
+    min-height: 80vh;
 }
 
 .logo{
@@ -34,12 +54,29 @@ textarea{
     text-align: left;
 }
 
-.CodeMirror{
-    min-height: 60vh;
-    border-radius: 3%;
+ .CodeMirror{
+    min-height: 90%;
+    max-height: 90%;
+    height: 90%;
 }
+
+#home, #profile{
+    min-height: 80vh;
+    max-height: 80vh;
+    height: 80vh;
+}
+
+/* #profile{
+    display: none;
+} */
 
 #replace-button{
     float: right;
     background-color: cornflowerblue;
+    width: 100px;
+    max-width: 100px
+}
+
+#html-header{
+    padding-bottom: 6px;
 }
