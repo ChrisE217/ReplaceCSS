@@ -1,18 +1,22 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fafafa;
+    background-color: #212529;
+    color: white;
 }
 
 .navigation{
     height: 10vh;
     max-height: 200px;
     padding: 10px;
-    background-color: white;
+    background-color: #212529;
+    border: 1px solid rgba(0,0,0,.125);
+border-radius: .25rem;
 }
 
 .footer{
-    background-color: white;
+    background-color: #212529;
     text-align: center;
+
 }
 textarea{
     min-height: 60vh;
@@ -28,4 +32,14 @@ textarea{
     font-size: xx-large;
     color: cornflowerblue;
     text-align: left;
+}
+
+.CodeMirror{
+    min-height: 60vh;
+    border-radius: 3%;
+}
+
+#replace-button{
+    float: right;
+    background-color: cornflowerblue;
 }

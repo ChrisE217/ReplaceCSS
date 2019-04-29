@@ -9,7 +9,10 @@
   <link rel="stylesheet" href="css/site.css">
   <script src="codemirror-5.45.0/lib/codemirror.js"></script>
   <link rel="stylesheet" href="codemirror-5.45.0/lib/codemirror.css">
-  <script src="codemirror-5.45.0/mode/javascript/javascript.js"></script>
+  <link rel="stylesheet" href="codemirror-5.45.0/theme/dracula.css">
+  <script src="codemirror-5.45.0/mode/css/css.js"></script>
+  <script src="codemirror-5.45.0/mode/xml/xml.js"></script>
+  <script src="codemirror-5.45.0/mode/htmlmixed/htmlmixed.js"></script>
   <title>ReplaceCSS</title>
 </head>
 
@@ -17,6 +20,7 @@
   <div class="container-fluid">
     <div class="row navigation">
       <div class="col-lg-12">
+        <button id="replace-button" class="btn btn-outline-dark">Extract</button>
         <div class="logo">ReplaceCSS</div>
       </div>
     </div>
@@ -29,7 +33,7 @@
       </div>
     </div>
   </div>
-  <div class="card footer fixed-bottom">
+  <div class="card footer sticky-bottom">
     <div class="card-body">
       <h5 class="card-title center">ReplaceCSS</h5>
       <p class="card-text">ReplaceCSS is an open source project created by <a href="https://www.chrisewart.net">Chris
