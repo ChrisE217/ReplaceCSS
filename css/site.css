@@ -104,11 +104,14 @@ body{
 .nav-tabs .nav-link{
     border: none;
     color: white;
+    outline: none;
+
 }
 
 .nav-tabs .nav-link.active{
     background-color: #282a36;
     color: white;
+    outline: none;
 }
 
 .nav-tabs{
