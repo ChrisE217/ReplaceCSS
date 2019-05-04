@@ -24,7 +24,6 @@
     }
 }
 
-
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #212529;
@@ -40,6 +39,7 @@ body{
     background-color: #212529;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
+    text-align: center;
     align-content: center;
 }
 
@@ -71,10 +71,10 @@ body{
 .logo{
     font-size: xx-large;
     color: cornflowerblue;
-    text-align: left;
+    float: left;
 }
 
- .CodeMirror{
+.CodeMirror{
     max-height: 90%;
     height: 90% !important;
     border-bottom-left-radius: 3%;
@@ -87,25 +87,21 @@ body{
     height: 80vh;
 }
 
-
-
 #replace-button{
-    float: right;
     background-color: cornflowerblue;
     width: 100px;
-    max-width: 100px
+    max-width: 100px;
+    float: right;
 }
 
 #html-header{
     padding-bottom: 6px;
 }
 
-
 .nav-tabs .nav-link{
     border: none;
     color: white;
     outline: none;
-
 }
 
 .nav-tabs .nav-link.active{
@@ -121,3 +117,4 @@ body{
 #profile{
     position: fixed;
 }
+
