@@ -8,6 +8,15 @@
     .footer .card-title{
         display: none;
     }
+    #options{
+        margin-left: 8px !important;
+    }
+    .btn-group{
+        padding-left: 5px;
+    }
+    .donate{
+        display: none;
+    }
 }
 
 @media screen and (max-height: 800px){
@@ -22,8 +31,11 @@
     .footer{
           font-size: x-small !important;
     }
-}
 
+    #options{
+        display: none;
+    }
+}
 
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -40,6 +52,7 @@ body{
     background-color: #212529;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
+    text-align: center;
     align-content: center;
 }
 
@@ -71,10 +84,10 @@ body{
 .logo{
     font-size: xx-large;
     color: cornflowerblue;
-    text-align: left;
+    float: left;
 }
 
- .CodeMirror{
+.CodeMirror{
     max-height: 90%;
     height: 90% !important;
     border-bottom-left-radius: 3%;
@@ -87,25 +100,22 @@ body{
     height: 80vh;
 }
 
-
-
 #replace-button{
-    float: right;
     background-color: cornflowerblue;
     width: 100px;
-    max-width: 100px
+    max-width: 100px;
+    margin-top: 5px;
+    float: right;
 }
 
 #html-header{
     padding-bottom: 6px;
 }
 
-
 .nav-tabs .nav-link{
     border: none;
     color: white;
     outline: none;
-
 }
 
 .nav-tabs .nav-link.active{
@@ -120,4 +130,44 @@ body{
 
 #profile{
     position: fixed;
+}
+
+.btn{
+    background-color: rgba(100, 149, 237, 0.6);
+}
+
+.btn.active{
+    background-color: cornflowerblue !important;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgba(100, 149, 237, 0.8);
+    cursor: pointer;
+}
+
+.btn.focus{
+    box-shadow: none;
+}
+
+.btn-group{
+    padding-left: 10px;
+}
+
+#options{
+    margin-left: 90px;
+    float: left;
+    height: 48px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.donate > form{
+    margin-top: 10px;
+    position: fixed;
+    right: 5%;
+    float: right;
+}
+
+.donate{
+    float: right;
 }
