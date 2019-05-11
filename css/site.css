@@ -156,6 +156,8 @@ body{
 #options{
     margin-left: 90px;
     float: left;
+    position: fixed;
+    left: 35%;
     height: 48px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -164,7 +166,7 @@ body{
 .donate > form{
     margin-top: 10px;
     position: fixed;
-    right: 5%;
+    right: 2%;
     float: right;
 }
 
