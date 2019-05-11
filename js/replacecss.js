@@ -33,10 +33,10 @@ $('#html-tab').click(() => {
 
 function startReplace() {
   try {
-    //var parser = new DOMParser();
-    //var html = parser.parseFromString(inputHTMLBox.getValue(), 'text/html');
+    var parser = new DOMParser();
     var htmlInput = inputHTMLBox.getValue();
-    console.log(htmlInput);
+    var htmlElements = parser.parseFromString(htmlInput, 'text/html').body.children;
+    console.log(htmlElements)
   } catch (e) {
     console.log(e);
   }
