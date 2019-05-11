@@ -8,6 +8,12 @@
     .footer .card-title{
         display: none;
     }
+    #options{
+        margin-left: 8px !important;
+    }
+    .btn-group{
+        padding-left: 5px;
+    }
 }
 
 @media screen and (max-height: 800px){
@@ -21,6 +27,10 @@
 @media screen and (max-width: 600px ) {
     .footer{
           font-size: x-small !important;
+    }
+
+    #options{
+        display: none;
     }
 }
 
@@ -91,6 +101,7 @@ body{
     background-color: cornflowerblue;
     width: 100px;
     max-width: 100px;
+    margin-top: 5px;
     float: right;
 }
 
@@ -118,3 +129,31 @@ body{
     position: fixed;
 }
 
+.btn{
+    background-color: rgba(100, 149, 237, 0.6);
+}
+
+.btn.active{
+    background-color: cornflowerblue !important;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgba(100, 149, 237, 0.8);
+    cursor: pointer;
+}
+
+.btn.focus{
+    box-shadow: none;
+}
+
+.btn-group{
+    padding-left: 10px;
+}
+
+#options{
+    margin-left: 90px;
+    float: left;
+    height: 48px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

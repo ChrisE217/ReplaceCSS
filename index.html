@@ -19,9 +19,23 @@
 <body>
   <div class="container-fluid">
     <div class="row navigation">
-      <div class="col-lg-12">
+      <div class="col-lg-10">
         <div class="logo">ReplaceCSS</div>
-          <button id="replace-button" onClick="startReplace()" class="btn btn-outline-dark">Extract</button>
+        <div id="options">
+          Use:
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-outline-dark active">
+              <input type="checkbox" id="id-checkbox" > Id's
+            </label>
+            <label class="btn btn-outline-dark active">
+              <input type="checkbox" id="class-checkbox" > Classes
+            </label>
+            <label class="btn btn-outline-dark active">
+              <input type="checkbox" id="parent-checkbox" > Parent
+            </label>
+          </div>
+        </div>
+        <button id="replace-button" onClick="startReplace()" class="btn btn-outline-dark">Extract</button>
       </div>
     </div>
     <div class="row entry-boxes">
