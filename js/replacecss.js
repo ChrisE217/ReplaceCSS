@@ -1,5 +1,5 @@
 
-var inputHTMLBox = CodeMirror(document.getElementById('html-input'), {
+var inputHTMLBox = CodeMirror(document.getElementById("html-input"), {
   value: "<div class=\"btn btn-primary\" style=\"color: blue;\">Button</div>",
   mode: "htmlmixed",
   lineNumbers: true,
@@ -8,7 +8,7 @@ var inputHTMLBox = CodeMirror(document.getElementById('html-input'), {
   lineWrapping: true,
 });
 
-var outputCSSBox = CodeMirror(document.getElementById('home'), {
+var outputCSSBox = CodeMirror(document.getElementById("home"), {
   value: "body{\n\tbackground-color: blue;\n}",
   mode: "css",
   lineNumbers: true,
@@ -17,7 +17,7 @@ var outputCSSBox = CodeMirror(document.getElementById('home'), {
   lineWrapping: true,
 });
 
-var outputHTMLBox = CodeMirror(document.getElementById('profile'), {
+var outputHTMLBox = CodeMirror(document.getElementById("profile"), {
   value: "<div class=\"btn btn-primary\">Button</div>",
   mode: "htmlmixed",
   lineNumbers: true,
@@ -27,8 +27,8 @@ var outputHTMLBox = CodeMirror(document.getElementById('profile'), {
 });
 
 
-$('#html-tab').click(() => {
-  $('#profile').attr('style', 'position: static;')
+$("#html-tab").click(() => {
+  $("#profile").attr("style", "position: static;")
 });
 
 function getInput() {
@@ -36,22 +36,32 @@ function getInput() {
     let textInput = inputHTMLBox.getValue();
     if (textInput.length != 0) {
       const parser = new DOMParser();
-      let htmlElements = parser.parseFromString(textInput, 'text/html');
-      extractStyles(htmlElements.body);
+      let htmlElements = parser.parseFromString(textInput, "text/html");
+      const ids = document.getElementById("id-checkbox").checked;
+      const classes = document.getElementById("class-checkbox").checked;
+      const parents = document.getElementById("parent-checkbox").checked;
+      extractStyles(ids, classes, parents, htmlElements.body);
     }
   } catch (e) {
     console.log(e);
   }
 }
 
-function extractStyles(input) {
-
-
-  let cssOutput;
-  let htmlOutput;
-
-
-  setOutput(cssOutput, htmlmOutput)
+function extractStyles(useID, useClass, useParent, input) {
+  let cssOutput = "";
+  let htmlOutput = "";
+  var count = 0;
+  console.log("new call");
+  if (input.children.length > 1) {
+    console.log(input.children);
+    count += input.children.length;
+    var arr = input.children;
+    for (i = 0; i < arr.length; i++) {
+      console.log(arr[i]);
+    }
+  }
+  console.log(count);
+  setOutput(cssOutput, htmlOutput)
 }
 
 function setOutput(cssOutput, htmlOutput) {
