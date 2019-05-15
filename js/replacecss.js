@@ -31,14 +31,30 @@ $('#html-tab').click(() => {
   $('#profile').attr('style', 'position: static;')
 });
 
-function startReplace() {
+function getInput() {
   try {
-    var parser = new DOMParser();
-    var htmlInput = inputHTMLBox.getValue();
-    var htmlElements = parser.parseFromString(htmlInput, 'text/html').body.children;
-    console.log(htmlElements)
+    let textInput = inputHTMLBox.getValue();
+    if (textInput.length != 0) {
+      const parser = new DOMParser();
+      let htmlElements = parser.parseFromString(textInput, 'text/html');
+      extractStyles(htmlElements.body);
+    }
   } catch (e) {
     console.log(e);
   }
 }
 
+function extractStyles(input) {
+
+
+  let cssOutput;
+  let htmlOutput;
+
+
+  setOutput(cssOutput, htmlmOutput)
+}
+
+function setOutput(cssOutput, htmlOutput) {
+  outputCSSBox.setValue(cssOutput);
+  outputHTMLBox.setValue(htmlOutput);
+}
