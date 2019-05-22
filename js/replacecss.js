@@ -36,11 +36,11 @@ function getInput() {
     let textInput = inputHTMLBox.getValue();
     if (textInput.length != 0) {
       const parser = new DOMParser();
-      let htmlElements = parser.parseFromString(textInput, "text/html");
+      let htmlElements = parser.parseFromString(textInput, "text/html").body;
       const ids = document.getElementById("id-checkbox").checked;
       const classes = document.getElementById("class-checkbox").checked;
       const parents = document.getElementById("parent-checkbox").checked;
-      extractStyles(ids, classes, parents, htmlElements.body);
+      extractStyles(ids, classes, parents, htmlElements);
     }
   } catch (e) {
     console.log(e);
@@ -51,16 +51,11 @@ function extractStyles(useID, useClass, useParent, input) {
   let cssOutput = "";
   let htmlOutput = "";
   var count = 0;
-  console.log("new call");
+  console.log(input);
   if (input.children.length > 1) {
-    console.log(input.children);
-    count += input.children.length;
-    var arr = input.children;
-    for (i = 0; i < arr.length; i++) {
-      console.log(arr[i]);
-    }
+    var all = input.querySelectorAll("*");
+    console.log(all);
   }
-  console.log(count);
   setOutput(cssOutput, htmlOutput)
 }
 
