@@ -1,5 +1,4 @@
 var inputHTMLBox = CodeMirror(document.getElementById("html-input"), {
-    value: "<div class=\"btn btn-primary\" style=\"color: blue;\">Button</div>",
     mode: "htmlmixed",
     lineNumbers: true,
     theme: "dracula",
@@ -37,7 +36,6 @@ function getInput() {
             let htmlElements = parser.parseFromString(textInput, "text/html").body;
             const ids = document.getElementById("id-checkbox").checked;
             const classes = document.getElementById("class-checkbox").checked;
-            // const parent = document.getElementById("parent-checkbox").checked;
             extractStyles(ids, classes, parent, htmlElements);
         }
     } catch (e) {
