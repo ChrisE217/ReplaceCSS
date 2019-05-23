@@ -1,0 +1,20 @@
+{
+  "name": "replacecss",
+  "version": "1.0.0",
+  "description": "Takes an HTML string input and removes inline styles returning the HTML and CSS separated.",
+  "main": "replacecss.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisE217/replacecss.git"
+  },
+  "author": "Chris Ewart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisE217/replacecss/issues"
+  },
+  "homepage": "https://github.com/ChrisE217/replacecss#readme",
+  "dependencies": {}
+}
