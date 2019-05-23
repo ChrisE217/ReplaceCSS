@@ -56,14 +56,6 @@ function extractStyles(useID, useClass, useParent, input) {
             if (useID && node.hasAttribute('id')) {
                 style = ("#" + node.id + "\{\n\t" + node.getAttribute("style") + "\n\}");
             }
-            // if (useParent && node.parentNode.hasAttribute("style")) {
-            //     if (useClass) {
-            //         style = ("." + node.parentNode.className.split(" ").join(" .") + "\{\n\t" + node.parentNode.getAttribute("style") + "\n\}");
-            //     }
-            //     if (useID) {
-            //         style = ("#" + node.parentNode.id + "\{\n\t" + node.parentNode.getAttribute("style") + "\n\}");
-            //     }
-            // }
             node.removeAttribute("style");
             cssOutput.push(style);
         }
