@@ -36,14 +36,14 @@ function getInput() {
             let htmlElements = parser.parseFromString(textInput, "text/html").body;
             const ids = document.getElementById("id-checkbox").checked;
             const classes = document.getElementById("class-checkbox").checked;
-            extractStyles(ids, classes, parent, htmlElements);
+            extractStyles(ids, classes, htmlElements);
         }
     } catch (e) {
         console.log(e);
     }
 }
 
-function extractStyles(useID, useClass, useParent, input) {
+function extractStyles(useID, useClass, input) {
     let cssOutput = [];
     input.querySelectorAll("body *").forEach((node) => {
         if (node.hasAttribute("style")) {
@@ -58,13 +58,11 @@ function extractStyles(useID, useClass, useParent, input) {
             cssOutput.push(style);
         }
     });
-    console.log(input);
     let htmlOutput = input.innerHTML;
     setOutput(cssOutput.join("\n"), htmlOutput)
 }
 
 function setOutput(cssOutput, htmlOutput) {
-
     outputCSSBox.setValue(cssOutput);
     outputHTMLBox.setValue(htmlOutput);
 }
