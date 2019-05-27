@@ -14,6 +14,7 @@ var outputCSSBox = CodeMirror(document.getElementById("home"), {
     lineWrapping: true,
 });
 
+
 var outputHTMLBox = CodeMirror(document.getElementById("profile"), {
     mode: "htmlmixed",
     lineNumbers: true,
@@ -24,11 +25,10 @@ var outputHTMLBox = CodeMirror(document.getElementById("profile"), {
 
 
 $("#html-tab").click(() => {
-    $("#profile").attr("style", "position: static;")
+    $("#profile").attr("style", "position: static;");
 });
 
 function getInput() {
-
     try {
         let textInput = inputHTMLBox.getValue();
         if (textInput.length != 0) {
@@ -48,13 +48,16 @@ function extractStyles(useID, useClass, input) {
     input.querySelectorAll("body *").forEach((node) => {
         if (node.hasAttribute("style")) {
             let style = "";
-            if (useClass) {
+            if (useClass && node.hasAttribute("class")) {
                 style = ("." + node.className.split(" ").join(" .") + "\{\n\t" + node.getAttribute("style") + "\n\}");
             }
-            if (useID && node.hasAttribute('id')) {
+            if (useID && node.hasAttribute("id")) {
                 style = ("#" + node.id + "\{\n\t" + node.getAttribute("style") + "\n\}");
             }
-            node.removeAttribute("style");
+            if (!node.hasAttribute("class") && !node.hasAttribute("id")){
+		style = (node.tagName + "\{\n\t" + node.getAttribute("style") + "\n\}");
+	    }
+	    node.removeAttribute("style");
             cssOutput.push(style);
         }
     });
