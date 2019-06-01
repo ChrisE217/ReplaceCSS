@@ -10,6 +10,7 @@
     }
     #options{
         margin-left: 8px !important;
+        left: 15% !important;
     }
     .btn-group{
         padding-left: 5px;
@@ -156,8 +157,8 @@ body{
 #options{
     margin-left: 90px;
     float: left;
-    position: fixed;
-    left: 35%;
+    position: relative;
+    left: 32%;
     height: 48px;
     padding-top: 5px;
     padding-bottom: 5px;
